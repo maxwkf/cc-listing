@@ -1,0 +1,119 @@
+section {
+    &.block {
+        &.chat-form {
+            position: fixed;
+            height: 565px;
+            z-index: 900;
+            transition: $transition-speed;
+            background-color: $white;
+            border-radius: 22px;
+            border: 1px solid $vp-light-grey;
+            right: 8px;
+            bottom: -567px;
+            width: calc(100vw - 16px);
+
+            @include box-shadow;
+
+            @include media-breakpoint-up(sm) {
+                width: 250px;
+                max-height: auto;
+            }
+
+            .chat-icon {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                right: 16px;
+                top: -80px;
+                background: transparent;
+                //our work type icons
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 21.5px;
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    @include media-breakpoint-up(lg) {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 36px;
+                    }
+                }
+                .post-type-archive & {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 36px;
+                    }
+                }
+
+                @include media-breakpoint-up(sm) {
+                    width: 80px;
+                    top: -100px;
+                }
+                @include media-breakpoint-up(md) {
+                    top: -110px;
+                }
+                &.mob {
+                    display: block;
+                    @include media-breakpoint-up(lg) {
+                        display: none;
+                    }
+                }
+                &.dt {
+                    display: none;
+                    @include media-breakpoint-up(lg) {
+                        display: block;
+                    }
+                }
+            }
+            .console {
+                height: 100%;
+                overflow-y: hidden;
+                .pop-up {
+                    height: calc(100% - 64px);
+                    padding: 50px 20px 20px;
+                    .qr-wrap {
+                        padding-top: 14px;
+                        text-align: center;
+                    }
+                }
+                .footer {
+                    padding: 20px;
+                    background-color: #25d366;
+                    border-radius: 0 0 22px 22px;
+                    text-align: center;
+                    color: $white;
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+
+            &.open {
+                bottom: 10px;
+                max-height: 350px;
+                .chat-icon {
+                    width: 50px;
+                    top: 0;
+                    img {
+                        display: none;
+                    }
+                    &::before {
+                        top: 10px;
+                        background-image: url("../../images/icons/v-icon.svg");
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

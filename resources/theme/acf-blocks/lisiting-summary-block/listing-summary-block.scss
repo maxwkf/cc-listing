@@ -1,0 +1,138 @@
+section {
+    &.block {
+        &.listing-summary {
+            position: relative;
+            .listing-details {
+                .heading-wrap {
+                    padding-bottom: 15px;
+                    @include media-breakpoint-up(lg) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-bottom: 30px;
+                    }
+                    h2 {
+                        line-height: normal;
+                        margin: 0;
+                    }
+                }
+
+                .icon-wrap {
+                    border-top: 0.2px solid $dark;
+                    border-bottom: 0.2px solid $dark;
+                    @include media-breakpoint-up(md) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .icons {
+                        display: flex;
+                        .icon {
+                            margin: 10px 10px 10px 0;
+                            border-right: 0.2px solid $dark;
+                            display: flex;
+                            align-items: center;
+                            @include media-breakpoint-up(lg) {
+                                border: none;
+                            }
+                            &:last-child {
+                                border: none;
+                            }
+                            span {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                    .floorplan {
+                        font-size: 12px;
+                        img {
+                            padding: 10px 10px 10px 0;
+                            @include media-breakpoint-up(lg) {
+                                padding: 0;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                    .text {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .intro {
+                    padding: 30px 0 14px;
+                }
+
+                .features-wrap {
+                    .features {
+                        padding: 30px 0 14px;
+                        border-top: 0.2px solid $dark;
+                        .wrapper {
+                            display: flex;
+                            @include media-breakpoint-up(md) {
+                                display: block;
+                            }
+                            .icon {
+                                padding-right: 10px;
+                                span {
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .video-wrap {
+                    video {
+                        border-top: 0.2px solid $dark;
+                        padding: 30px 0;
+                        width: 100%;
+                    }
+                }
+
+                .floor-plan {
+                    scroll-margin-top: calc($header-height-lg-scrolled + 5px);
+                    img {
+                        border-top: 0.2px solid $dark;
+                        padding: 30px 0;
+                        width: 100%;
+                        @include media-breakpoint-up(lg) {
+                            padding: 30px 0 0;
+                        }
+                    }
+                }
+            }
+            .sticky-wrap {
+                background-color: $vp-light-grey;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+                display: none;
+                @include media-breakpoint-up(md) {
+                    display: block;
+                }
+                @include media-breakpoint-up(lg) {
+                    padding: 25px;
+                    border-radius: 5px;
+                    position: sticky;
+                    top: 80px;
+                }
+                p {
+                    display: none;
+                    @include media-breakpoint-up(lg) {
+                        display: block;
+                    }
+                }
+                .btn-wrap {
+                    text-align: center;
+                }
+                &.shrink {
+                    display: block;
+                }
+            }
+        }
+    }
+}

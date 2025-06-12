@@ -1,0 +1,309 @@
+section {
+    &.block {
+        &.listings {
+            .heading-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding-bottom: 18px;
+                border-bottom: 3px solid $black;
+                .heading {
+                    color: $dark;
+                    margin-bottom: 0;
+                }
+                .filters-wrap {
+                    display: flex;
+                    align-items: center;
+                    span {
+                        color: $dark;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 20px;
+                    }
+                    .filters-toggle {
+                        display: flex;
+                        padding: 8px 24px 8px 11px;
+                        color: $black;
+                        border: 1px solid $black;
+                        margin-left: 9px;
+                        border-radius: 5px;
+                        background: none;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        line-height: 140.62%;
+                        transition: all $transition-speed;
+                        &:hover,
+                        &.toggled {
+                            background-color: $primary;
+                            color: $white;
+
+                            .icon {
+                                svg {
+                                    path {
+                                        fill: $light;
+                                    }
+                                }
+                            }
+                        }
+                        .icon {
+                            display: block;
+                            margin-right: 11px;
+                            svg {
+                                path {
+                                    transition: all $transition-speed;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .filters-col {
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                position: absolute;
+                top: 40px;
+                left: 0;
+                border-radius: 5px;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+                z-index: 600;   // original 20, but when this is the top block, it should cover the menu.
+                padding: 23px 21px;
+                transition: opacity $transition-speed;
+                opacity: 0;
+                pointer-events: none;
+                @include media-breakpoint-up(md) {
+                    padding: 30px 50px;
+                    margin-top: 24px;
+                }
+
+                &.toggled {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+                .title-wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 16px;
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 35px;
+                    }
+                    .close {
+                        width: 38px;
+                        height: 40px;
+                        background: none;
+                        padding: 0;
+                        position: relative;
+                        top: -20px;
+                        right: -20px;
+                        .icon {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            opacity: 0.5;
+                            svg {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .title {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 140.62%;
+                    color: $black;
+                    margin-bottom: 0;
+                }
+                .heading {
+                    color: $black;
+                    font-size: 16px;
+                    line-height: 140.62%;
+                    margin-bottom: 9px;
+                }
+
+                .park-location-wrap {
+                    margin-bottom: 21px;
+                }
+
+                .price-wrap {
+                    margin-bottom: 33px;
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 42px;
+                    }
+                    .price-heading {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        margin-bottom: 18px;
+                        .price-values {
+                            display: flex;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 140.62%;
+                            color: $black;
+                        }
+                    }
+                    #price-slider {
+                        &.noUi-target {
+                            height: 3px;
+                            border: 0;
+                            box-shadow: none;
+                            background-color: #999999;
+                            .noUi-connect {
+                                background-color: $secondary;
+                            }
+                            .noUi-handle {
+                                width: 22.4px;
+                                height: 24px;
+                                background-color: light;
+                                border: 0;
+                                border-radius: 50%;
+                                box-shadow: none;
+                                top: -10px;
+                                &::after,
+                                &::before {
+                                    display: none;
+                                }
+                                .noUi-touch-area {
+                                    background-color: $secondary;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .categories {
+                    border-bottom: 1px solid $black;
+                    padding-bottom: 7px;
+                    .btn {
+                        transition: all $transition-speed;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: 0.3px;
+                        padding: 6px 10px;
+                        margin-bottom: 2px;
+                        border: 0;
+                        // &:hover {
+                        //     background-color: $dark;
+                        //     color: $light;
+                        // }
+                        @include media-breakpoint-up(md) {
+                            margin-right: 3px;
+                            margin-bottom: 6px;
+                            padding: 12px 18px;
+                            &:hover {
+                                background-color: #c6d4dd;
+                                color: $light;
+                            }
+                        }
+                    }
+                    .btn-check:checked + .btn {
+                        background-color: #c6d4dd;
+                    }
+                }
+                .submit-wrap {
+                    display: flex;
+                    padding-top: 13px;
+                    padding-bottom: 17px;
+                    @include media-breakpoint-up(md) {
+                        justify-content: flex-end;
+                        padding-top: 41px;
+                        padding-bottom: 23px;
+                    }
+                    .reset {
+                        display: flex;
+                        align-items: center;
+                        padding: 12px 50px;
+                    }
+                    .submit {
+                        margin-left: 13px;
+                    }
+                }
+            }
+
+            .results {
+                .no-results {
+                    padding-top: 30px;
+                    @include media-breakpoint-up(md) {
+                        padding-top: 60px;
+                    }
+                    .heading {
+                        color: $dark;
+                        text-align: center;
+                    }
+                }
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                .loader-holder {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 500;
+                    pointer-events: none;
+                    .loader {
+                        position: fixed;
+                        top: calc(50% - 120px);
+                        left: calc(50% - 60px);
+                        border: 16px solid $primary;
+                        border-top: 16px solid $secondary;
+                        border-radius: 50%;
+                        width: 120px;
+                        height: 120px;
+                        animation: spin 2s linear infinite;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            @include property-card;
+
+            .listings-pagination {
+                padding-top: 24px;
+                .pagination-wrap {
+                    display: flex;
+                    justify-content: center;
+                }
+                .page-numbers {
+                    color: $black;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    font-weight: $bold;
+                    color: $dark;
+                    opacity: 0.8;
+                    transition: opacity $transition-speed;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &.current {
+                        cursor: default;
+                        opacity: 1;
+                        pointer-events: none;
+                    }
+                    &.prev {
+                    }
+                    &.next {
+                    }
+                }
+            }
+        }
+    }
+}

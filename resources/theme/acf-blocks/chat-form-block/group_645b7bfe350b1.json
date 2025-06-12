@@ -1,0 +1,135 @@
+{
+    "key": "group_645b7bfe350b1",
+    "title": "Whatsapp Icon Block",
+    "fields": [
+        {
+            "key": "field_65eae6e1af21f",
+            "label": "Whatsapp Icon",
+            "name": "whatsapp_icon",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "For single-listing whatsapp information, please go to Theme General Settings.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65eae6fcaf220",
+                    "label": "Show Whatsapp Icon",
+                    "name": "show_whatsapp_icon",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_652e6a3a18c8f",
+                    "label": "Whatsapp Text",
+                    "name": "whatsapp_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_652e6a5c18c90",
+                    "label": "Whatsapp QR Code",
+                    "name": "whatsapp_qr_code",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_652e6a9b18c91",
+                    "label": "Mobile Number",
+                    "name": "mobile_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "1. Remove the leading zero<br\/>\r\n2. Add 44 as prefix<br\/>\r\n3. Use numbers only i.e. no white space<br\/>\r\nExample: 07 123 123 123 -> 447123123123",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/chat-form-block"
+            }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710150641
+}
