@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:     CC Listing
- * Plugin URI:      https://cambridgecreative.co.uk
+ * Plugin URI:      nil
  * Description:     This plugin is going to copy files necessary for cc's listing module.  If those files already exist, it will be skipped to avoid overwriting on reactivation.
  * Author:          Max Wong
- * Author URI:      https://cambridgecreative.co.uk
+ * Author URI:      nil
  * Text Domain:     cc-listing
  * Domain Path:     /languages
  * Version:         0.1.0
